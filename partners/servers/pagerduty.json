@@ -1,0 +1,68 @@
+{
+  "name": "pagerduty-mcp",
+  "title": "PagerDuty",
+  "summary": "Investigate and manage PagerDuty incidents, on-call schedules, services, teams, and escalation policies from AI agents.",
+  "description": "The PagerDuty-hosted MCP server lets AI agents securely work with a PagerDuty account. Agents can list and triage incidents, check who is on call, look up services, teams, and escalation policies, review change events, and take actions such as acknowledging, resolving, or adding notes to incidents. All actions run with the permissions of the authenticated PagerDuty user. US and EU service regions are supported.",
+  "kind": "mcp",
+  "license": {
+    "name": "PagerDuty Developer Agreement",
+    "url": "https://docs.pagerduty.com/developer/pagerduty-developer-agreement"
+  },
+  "icon": "https://cdn.brandfolder.io/YX9ETPCP/at/266537g8kh6mmvt24jvsjb/P-GreenRGB.svg",
+  "externalDocumentation": {
+    "title": "PagerDuty MCP Tooling & Remote Server",
+    "url": "https://docs.pagerduty.com/developer/mcp-tooling-remote-server"
+  },
+  "useCases": [
+    {
+      "name": "Incident triage",
+      "description": "Find open or high-urgency incidents, summarize their details and timeline, and acknowledge, resolve, or annotate them."
+    },
+    {
+      "name": "On-call lookup",
+      "description": "Identify who is currently on call for a service, schedule, or escalation policy."
+    },
+    {
+      "name": "Service and change context",
+      "description": "Look up service ownership, teams, and recent change events to speed up investigation."
+    }
+  ],
+  "tags": ["incident-management", "on-call", "aiops", "sre"],
+  "vendor": "Partner",
+  "categories": "Monitoring & Diagnostics",
+  "versionName": "original",
+  "remote": "https://mcp.pagerduty.com/mcp",
+  "remoteType": "streamable-http",
+  "authSchemas": ["OAuth2"],
+  "securitySchemes": {
+    "oauth2": {
+      "type": "oauth2",
+      "description": "PagerDuty OAuth 2.0 authorization code flow with PKCE. Users sign in at identity.pagerduty.com and grant the app access to their account.",
+      "flows": {
+        "authorizationCode": {
+          "authorizationUrl": "https://identity.pagerduty.com/oauth/authorize",
+          "tokenUrl": "https://identity.pagerduty.com/oauth/token",
+          "refreshUrl": "https://identity.pagerduty.com/oauth/token",
+          "scopes": {
+            "read": "Read access to PagerDuty resources on behalf of the user",
+            "write": "Read and write access to PagerDuty resources on behalf of the user"
+          }
+        }
+      }
+    },
+    "apiToken": {
+      "type": "apiKey",
+      "description": "PagerDuty User API token, sent as: Token token=<token>",
+      "in": "header",
+      "name": "Authorization"
+    }
+  },
+  "supportContactInfo": {
+    "name": "PagerDuty Support",
+    "email": "support@pagerduty.com",
+    "url": "https://support.pagerduty.com"
+  },
+  "customProperties": {
+    "x-ms-preview": false
+  }
+}
