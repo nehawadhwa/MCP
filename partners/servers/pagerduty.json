@@ -48,10 +48,10 @@
     }
   ],
   "tags": [
-    "incident-management",
-    "on-call",
-    "aiops",
-    "sre"
+    "Autonomous actions",
+    "Incident management",
+    "Resolution",
+    "SRE"
   ],
   "vendor": "Partner",
   "categories": "Monitoring & Diagnostics",
@@ -65,17 +65,16 @@
     "oauth2": {
       "type": "oauth2",
       "description": "PagerDuty OAuth 2.0 authorization code flow with PKCE. Users sign in at identity.pagerduty.com and grant the app access to their account.",
-      "flows": {
-        "authorizationCode": {
-          "authorizationUrl": "https://identity.pagerduty.com/oauth/authorize",
-          "tokenUrl": "https://identity.pagerduty.com/oauth/token",
-          "refreshUrl": "https://identity.pagerduty.com/oauth/token",
-          "scopes": {
-            "read": "Read access to PagerDuty resources on behalf of the user",
-            "write": "Read and write access to PagerDuty resources on behalf of the user"
-          }
-        }
-      }
+      "authorizationUrl": "https://identity.pagerduty.com/oauth/authorize",
+      "tokenUrl": "https://identity.pagerduty.com/oauth/token",
+      "refreshUrl": "https://identity.pagerduty.com/oauth/token",
+      "scopes": [
+        "read",
+        "write"
+      ],
+      "flows": [
+        "authorizationCode"
+      ]
     },
     "apiToken": {
       "type": "apiKey",
