@@ -15,25 +15,52 @@
   },
   "useCases": [
     {
-      "name": "Incident triage",
-      "description": "Find open or high-urgency incidents, summarize their details and timeline, and acknowledge, resolve, or annotate them."
+      "name": "Real-time Alert Triage",
+      "description": "Triage incoming alerts, acknowledge pages, and surface actionable signal from alert noise using ML-based signal intelligence."
     },
     {
-      "name": "On-call lookup",
-      "description": "Identify who is currently on call for a service, schedule, or escalation policy."
+      "name": "On-Call & Escalation Visibility",
+      "description": "Check on-call schedules, user assignments, escalation policies, and team structures directly inside AI workspaces without switching tools."
     },
     {
-      "name": "Service and change context",
-      "description": "Look up service ownership, teams, and recent change events to speed up investigation."
+      "name": "Telemetry & Signal Analysis",
+      "description": "Query production telemetry, analyze critical service health, and inspect application logs across connected tools using natural language."
+    },
+    {
+      "name": "Root Cause Identification",
+      "description": "Leverage shared operational memory and historical incident data to investigate failure modes, trace issues, and surface root causes quickly."
+    },
+    {
+      "name": "Lifecycle Orchestration",
+      "description": "Declare incidents, track follow-ups, update incident statuses, and coordinate emergency responses without tab juggling."
+    },
+    {
+      "name": "Blended Team Collaboration",
+      "description": "Facilitate seamless collaboration between human responders and AI agents (such as Paige, the SRE Agent) across chat tools and developer environments."
+    },
+    {
+      "name": "Automated Remediation Actions",
+      "description": "Execute automated actions, restart services, and run Kubernetes remediations across cloud, hybrid, and on-prem infrastructure."
+    },
+    {
+      "name": "Post-Incident Review & Prevention",
+      "description": "Conduct structured operational reviews, generate post-incident reviews automatically, and deliver platform insights back to developers to prevent future disruptions."
     }
   ],
-  "tags": ["incident-management", "on-call", "aiops", "sre"],
+  "tags": [
+    "incident-management",
+    "on-call",
+    "aiops",
+    "sre"
+  ],
   "vendor": "Partner",
   "categories": "Monitoring & Diagnostics",
   "versionName": "original",
   "remote": "https://mcp.pagerduty.com/mcp",
   "remoteType": "streamable-http",
-  "authSchemas": ["OAuth2"],
+  "authSchemas": [
+    "OAuth2"
+  ],
   "securitySchemes": {
     "oauth2": {
       "type": "oauth2",
