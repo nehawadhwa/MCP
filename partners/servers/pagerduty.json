@@ -48,10 +48,21 @@
     }
   ],
   "tags": [
-    "Autonomous actions",
-    "Incident management",
-    "Resolution",
-    "SRE"
+    "mcp",
+    "pagerduty",
+    "pdrp",
+    "incident-management",
+    "sre",
+    "triage",
+    "investigation",
+    "resolution",
+    "remediation",
+    "autonomous-actions",
+    "paige-sre-agent",
+    "ai-coding-tools",
+    "claude",
+    "cursor",
+    "signal-intelligence"
   ],
   "vendor": "Partner",
   "categories": "Monitoring & Diagnostics",
